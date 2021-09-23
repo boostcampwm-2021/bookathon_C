@@ -37,17 +37,9 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: './image/[name].[ext]'
-            }
-          }
-        ],
-        type: 'javascript/auto'
-      }
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        type: 'asset/resource'
+      },
     ]
   },
   
