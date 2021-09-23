@@ -1,4 +1,5 @@
 import '../css/main.scss'
+import '../js/kakao.min'
 
 const shareOpenBtn = document.querySelector('.share-btn')
 const shareBtnList = document.querySelector('.share-btn-list')
@@ -8,26 +9,30 @@ const writePopup = document.querySelector('.popup')
 const writeBtn = document.querySelector('.write-btn')
 const fileUploadBtn = document.querySelector('.file-upload-btn')
 
+const href = location.href
+
 const copyHandler = () => {
     let url = ''
     const textarea = document.createElement('textarea')
     document.body.appendChild(textarea)
-    url = window.document.location.href
-    textarea.value = url
+    textarea.value = href
     textarea.select()
     document.execCommand('copy')
     document.body.removeChild(textarea)
     alert('URL이 복사되었습니다.')
 }
 
+const naverShareHandler = () => {
+    window.open(`https://share.naver.com/web/shareView.nhn?url=${location.href}&title=i'am everywhere`,'_blank');
+}
+
 const kakaoShareHandler = () => {
-    /*
-    Kakao.init('31c50ca8bd99011697fd15fc5b1b52b7')      // 사용할 앱의 JavaScript 키를 설정
+    Kakao.init('d3fd7feec833bfcac050d9c364bcb690')      // 사용할 앱의 JavaScript 키를 설정
     Kakao.Link.sendDefault({
           objectType:'feed'
         , content : {
-            title
-            , description:desc   // 콘텐츠 상세설명
+            title: `I'm Everywhere`
+            , imageUrl: href + '/image/favicon.png'
             , link : {
                   mobileWebUrl:href   // 모바일 카카오톡에서 사용하는 웹 링크 URL
                 , webUrl:href // PC버전 카카오톡에서 사용하는 웹 링크 URL
@@ -43,7 +48,6 @@ const kakaoShareHandler = () => {
             }
         ]
     })
-    */
 }
 
 const showPopup = () => writePopup.classList.add('on')
@@ -55,6 +59,7 @@ const uploadVideo = () => {
 shareOpenBtn.addEventListener('click', () => shareOpenBtn.classList.toggle('on'))
 shareBtnList.addEventListener('click', () => shareOpenBtn.classList.remove('on'))
 shareBtnList.querySelector('.copy-btn').addEventListener('click', copyHandler)
+shareBtnList.querySelector('.naver-btn').addEventListener('click', naverShareHandler)
 shareBtnList.querySelector('.kakao-btn').addEventListener('click', kakaoShareHandler)
 volumeRangeBar.addEventListener('input', () => {
     const volume = Number(volumeRangeBar.value)

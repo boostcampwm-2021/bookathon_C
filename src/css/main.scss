@@ -4,17 +4,20 @@
 body {
   background: $black;
   color: $white;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'SpoqaHanSansNeo-Regular';
   header {
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 50px;
-    margin-top: 25px;
-    margin-bottom: 50px;
+    padding: 25px 0 50px 0;
+    width: 100%;
+    top: 0;
+    position: absolute;
     #main_logo {
       font-weight: 700;
-      font-size: 35px;
+      font-family: 'GowunBatang-Bold';
+      font-size: 1.5rem;
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
@@ -27,25 +30,49 @@ body {
       justify-content: flex-end;
       align-items: center;
       text-align: end;
-      font-size: 25px;
+      font-size: 1rem;
       line-height: 25px;
       margin-right: 20px;
       .address_icon {
-        width: 25px;
+        width: 21px;
         height: 25px;
         margin-right:5px;
+      }
+      #address_text {
+        font-size: .85rem;
       }
     }
   }
   .main_contents_wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
+    #main_video {
+      > iframe {
+        width: 100%;
+        height: 100vh;
+      }
+    }
+    .video_cover {
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      position: absolute;
+      z-index: 1;
+      background-color: #1111116b;
+    }
     button {
       background: transparent;
       border: none;
+      top: 50%;
+      z-index: 2;
+      position: absolute;
       :hover {
         cursor: pointer;
+      }
+      &#left_move {
+        left: 1.5rem;
+      }
+      &#right_move {
+        right: 1.5rem;
       }
     }
     .move_btn {
