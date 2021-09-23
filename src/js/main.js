@@ -8,8 +8,14 @@ const volumeBtn = document.querySelector('.volumn-btn')
 const writePopup = document.querySelector('.popup')
 const writeBtn = document.querySelector('.write-btn')
 const fileUploadBtn = document.querySelector('.file-upload-btn')
+const uploadFile = document.querySelector('#video')
+const leftMove = document.querySelector('#left_move')
+const rightMove = document.querySelector('#right_move')
+const locationName = document.querySelector('#address_text')
+const videoIframe = document.querySelector('#main_video > iframe')
 
 const href = location.href
+const backend = `http://101.101.217.153`
 
 const copyHandler = () => {
     let url = ''
@@ -21,6 +27,17 @@ const copyHandler = () => {
     document.body.removeChild(textarea)
     alert('URL이 복사되었습니다.')
 }
+
+const getRandomVideo = () => {
+    fetch(`${backend}/api/video/random`).then(res => res.json())
+    .then(res => {
+        locationName.textContent = res.video.location
+        videoIframe.src = res.video.videoURL.replace('localhost', '101.101.217.153') + '?autoplay=1&mute=1'
+    })
+}
+
+leftMove.addEventListener('click', getRandomVideo)
+rightMove.addEventListener('click', getRandomVideo)
 
 const naverShareHandler = () => {
     window.open(`https://share.naver.com/web/shareView.nhn?url=${location.href}&title=i'am everywhere`,'_blank');
@@ -52,9 +69,20 @@ const kakaoShareHandler = () => {
 
 const showPopup = () => writePopup.classList.add('on')
 const hidePopup = () => writePopup.classList.remove('on')
-const uploadVideo = () => {
-    document.all.video.click()
-}
+const uploadVideo = () => document.all.video.click()
+
+const locationList = ['Seoul', 'Gyunggido', 'Daejeon', 'Daegu']
+const getRandomLoc = () => locationList[parseInt(Math.random() * 5)]
+uploadFile.addEventListener('input', () => {
+    const formData = new FormData()
+    formData.append('video', document.querySelector('#video').files[0])
+    formData.append('location', getRandomLoc())
+    fetch(`${backend}/api/video`, {
+        method: "POST",
+        headers: {  },
+        body: formData
+      })
+})
 
 shareOpenBtn.addEventListener('click', () => shareOpenBtn.classList.toggle('on'))
 shareBtnList.addEventListener('click', () => shareOpenBtn.classList.remove('on'))
@@ -72,3 +100,5 @@ volumeBtn.addEventListener('click', () => {
 writeBtn.addEventListener('click', showPopup)
 writePopup.querySelector('.close-btn').addEventListener('click', hidePopup)
 fileUploadBtn.addEventListener('click', uploadVideo)
+
+getRandomVideo()

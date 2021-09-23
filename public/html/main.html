@@ -18,7 +18,7 @@
         <img class='move_btn' src='/image/left_btn.svg' />
       </button>
       <div id='main_video'>
-        <iframe src="https://www.youtube.com/embed/S91wQbYYX3Q?autoplay=1&mute=1&autohide=1" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+        <iframe src="https://www.youtube.com/embed/S91wQbYYX3Q?autoplay=1&mute=1&autohide=1" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
         <div class="video_cover"></div>
       </div>
       <button type='button' id='right_move'>
@@ -46,10 +46,12 @@
               <span class="title-cont">Upload your video, enjoy together!</span>
           </div>
           <div class="popup-body">
+            <form id="form">
               <div class="file-upload-btn">
                   <span>Drag and drop or click your video</span>
               </div>
               <input type="file" id="video" accept="video/*">
+            </form>
           </div>
       </div>
   </body>
