@@ -1,0 +1,264 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 25px);
+    position: relative;
+    background-color: #111;
+  }
+  
+  textarea {
+    display: none;
+  }
+  
+  footer {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .btn {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 45px;
+    height: 45px;
+    box-shadow: 2px 2px 3px #999;
+    transition: .3s all;
+  }
+  
+  .share-btn {
+    background: url(../image/ic_share.svg) no-repeat (center / 18px), transparent;
+  
+    &.on {
+      background: url(../image/ic_exit.svg) no-repeat (center / 18px), #fff;
+    }
+  }
+  
+  .kakao-btn {
+    background: url(../image/ic_kakao.svg) no-repeat center, #FBE300;
+    border-width: 0;
+  }
+  
+  .naver-btn {
+    background: url(../image/ic_naver.png) no-repeat center, #00C73C;
+    border-width: 0;
+  }
+  
+  .share-btn-list {
+    display: none;
+    position: absolute;
+    bottom: 80px;
+  
+    > .btn:not(:last-child) {
+      margin-bottom: .8rem;
+    }
+  }
+  
+  .share-btn.on + .share-btn-list {
+    display: grid;
+  }
+  
+  .volume-controller {
+    height: 45px;
+    float: right;
+    display: flex;
+  }
+  
+  .volumn-btn {
+    align-self: center;
+    width: 36px;
+    height: 36px;
+    background: url(../image/ic_volume.svg) no-repeat (center / 20px), transparent;
+  
+    &.off {
+      background: url(../image/ic_volume_off.svg) no-repeat (center / 20px), transparent;
+    }
+  }
+  
+  .write-btn {
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    position: absolute;
+    height: 45px;
+    margin-left: 1rem;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+  
+    &:hover {
+      background-color: #fff;
+      color: #111;
+      border-color: #111;
+    }
+  }
+  
+  input[type=range] {
+    -webkit-appearance: none;
+    overflow: hidden;
+    width: 100%;
+    height: 5px;
+    align-self: center;
+    background: transparent;
+    cursor: pointer;
+    background-color: #7A7A7A;
+    border-radius: 10px;
+  
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 0;
+      height: 5px;
+      background: #fff;
+      box-shadow: -100vw 0 0 100vw #fff;
+      cursor: pointer;
+    }
+  }
+  
+  .popup {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #11111188;
+  
+    &.on {
+      display: block;
+    }
+  
+    .popup-container {
+      width: 400px;
+      box-shadow: 0 4px 10px rgb(51 51 51 / 10%), 0 0 4px rgb(51 51 51 / 5%);
+      height: fit-content;
+      padding: 1.5rem;
+      border-radius: 10px;
+      background-color: #fff;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+  
+      .close-btn {
+        right: 1.5rem;
+        top: 1.5rem;
+        position: absolute;
+        background: url(../image/ic_exit.svg) no-repeat center;
+        width: 1rem;
+        height: 1rem;
+      }
+  
+      .title {
+        font-weight: 600;
+        font-size: 1.15rem;
+        margin: 1rem 0 1.2rem 0;
+      }
+  
+      span {
+        display: block;
+        font-size: 0.75rem;
+        color: #828282;
+        margin-bottom: 1.5rem;
+      }
+  
+      .file-upload-btn {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 5px 10px;
+        font-size: 14px;
+        line-height: 22px;
+        border-radius: 5px;
+        color: #777;
+        background-color: #fff;
+        text-align: center;
+        border: 1px solid #E5E5E5;
+  
+        + input[type=file] {
+          display: none;
+        }
+  
+        &:hover {
+          border-color: #ddd;
+  
+          > span::before {
+            width: 72px;
+          }
+        }
+  
+        > span {
+          margin: 1.5rem 0;
+  
+          &::before {
+            content: '';
+            width: 64px;
+            height: 80px;
+            display: block;
+            transition: .1s all ease-in-out;
+            margin: 0 auto 1rem auto;
+            background: url(../image/ic_cloud.svg) no-repeat center;
+          }
+  
+          &.uploaded::before {
+            background: url(../image/ic_cloud.svg) no-repeat center;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes edit-in {
+    from {
+      opacity: 0;
+      transform: rotateZ(-70deg);
+    }
+  
+    to {
+      opacity: 1;
+      transform: rotateZ(0deg);
+    }
+  }
+  
+  @keyframes edit-out {
+    from {
+      opacity: 1;
+      transform: rotateZ(0deg);
+    }
+  
+    to {
+      opacity: 0;
+      transform: rotateZ(-70deg);
+    }
+  }
+  
+  @keyframes plus-in {
+    from {
+      opacity: 1;
+      transform: rotateZ(0deg);
+    }
+  
+    to {
+      opacity: 0;
+      transform: rotateZ(180deg);
+    }
+  }
+  
+  @keyframes plus-out {
+    from {
+      opacity: 0;
+      transform: rotateZ(180deg);
+    }
+  
+    to {
+      opacity: 1;
+      transform: rotateZ(0deg);
+    }
+  }
