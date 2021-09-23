@@ -1,7 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-    height: calc(100vh - 25px);
+    height: 100vh;
+    overflow-y: hidden;
     position: relative;
     background-color: #111;
   }
@@ -16,6 +17,7 @@ body {
     position: absolute;
     bottom: 0;
     padding: 1rem;
+    z-index: 2;
   }
   
   button {
@@ -39,6 +41,11 @@ body {
     &.on {
       background: url(../image/ic_exit.svg) no-repeat (center / 18px), #fff;
     }
+  }
+  
+  .copy-btn {
+    background: #fff url(../image/ic_copy.svg) no-repeat center/20px;
+    border-width: 0;
   }
   
   .kakao-btn {
@@ -157,6 +164,7 @@ body {
       }
   
       .title {
+        color: #111;
         font-weight: 600;
         font-size: 1.15rem;
         margin: 1rem 0 1.2rem 0;
