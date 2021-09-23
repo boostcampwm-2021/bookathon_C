@@ -38,7 +38,7 @@ eval("\n\n__webpack_require__(/*! core-js/es6 */ \"./node_modules/core-js/es6/in
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/main.scss */ \"./src/css/main.scss\");\n\n\n//# sourceURL=webpack://everywhere/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/main.scss */ \"./src/css/main.scss\");\n\nvar shareOpenBtn = document.querySelector('.share-btn');\nvar shareBtnList = document.querySelector('.share-btn-list');\nvar volumeRangeBar = document.querySelector('.volume-controller > input[type=range]');\nvar volumeBtn = document.querySelector('.volumn-btn');\nvar writePopup = document.querySelector('.popup');\nvar writeBtn = document.querySelector('.write-btn');\nvar fileUploadBtn = document.querySelector('.file-upload-btn');\n\nvar copyHandler = function copyHandler() {\n  var url = '';\n  var textarea = document.createElement('textarea');\n  document.body.appendChild(textarea);\n  url = window.document.location.href;\n  textarea.value = url;\n  textarea.select();\n  document.execCommand('copy');\n  document.body.removeChild(textarea);\n  alert('URL이 복사되었습니다.');\n};\n\nvar kakaoShareHandler = function kakaoShareHandler() {\n  /*\r\n  Kakao.init('31c50ca8bd99011697fd15fc5b1b52b7')      // 사용할 앱의 JavaScript 키를 설정\r\n  Kakao.Link.sendDefault({\r\n        objectType:'feed'\r\n      , content : {\r\n          title\r\n          , description:desc   // 콘텐츠 상세설명\r\n          , link : {\r\n                mobileWebUrl:href   // 모바일 카카오톡에서 사용하는 웹 링크 URL\r\n              , webUrl:href // PC버전 카카오톡에서 사용하는 웹 링크 URL\r\n          }\r\n      }\r\n      , buttons : [\r\n          {\r\n                title : 'Go!'    // 버튼 제목\r\n              , link : {\r\n                  mobileWebUrl:href   // 모바일 카카오톡에서 사용하는 웹 링크 URL\r\n                , webUrl:href // PC버전 카카오톡에서 사용하는 웹 링크 URL\r\n              }\r\n          }\r\n      ]\r\n  })\r\n  */\n};\n\nvar showPopup = function showPopup() {\n  return writePopup.classList.add('on');\n};\n\nvar hidePopup = function hidePopup() {\n  return writePopup.classList.remove('on');\n};\n\nvar uploadVideo = function uploadVideo() {\n  document.all.video.click();\n};\n\nshareOpenBtn.addEventListener('click', function () {\n  return shareOpenBtn.classList.toggle('on');\n});\nshareBtnList.addEventListener('click', function () {\n  return shareOpenBtn.classList.remove('on');\n});\nshareBtnList.querySelector('.copy-btn').addEventListener('click', copyHandler);\nshareBtnList.querySelector('.kakao-btn').addEventListener('click', kakaoShareHandler);\nvolumeRangeBar.addEventListener('input', function () {\n  var volume = Number(volumeRangeBar.value);\n  volume === 0 ? volumeBtn.classList.add('off') : volumeBtn.classList.remove('off');\n});\nvolumeBtn.addEventListener('click', function () {\n  volumeBtn.classList.toggle('off');\n  volumeRangeBar.value = volumeBtn.classList.contains('off') ? 0 : 100;\n});\nwriteBtn.addEventListener('click', showPopup);\nwritePopup.querySelector('.close-btn').addEventListener('click', hidePopup);\nfileUploadBtn.addEventListener('click', uploadVideo);\n\n//# sourceURL=webpack://everywhere/./src/js/main.js?");
 
 /***/ }),
 
@@ -3177,7 +3177,7 @@ eval("__webpack_require__(/*! ../modules/web.timers */ \"./node_modules/core-js/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  padding: 0px;\\n  margin: 0px;\\n}\\n\\nbody {\\n  background: #202020;\\n  color: #ffffff;\\n  font-family: \\\"Ubuntu\\\", sans-serif;\\n}\\nbody header {\\n  display: flex;\\n  align-items: center;\\n  justify-content: flex-end;\\n  height: 50px;\\n  margin-top: 25px;\\n  margin-bottom: 50px;\\n}\\nbody header #main_logo {\\n  font-weight: 700;\\n  font-size: 35px;\\n  position: absolute;\\n  left: 50%;\\n  transform: translate(-50%, 0);\\n}\\nbody header #address {\\n  width: 300px;\\n  height: 25px;\\n  display: flex;\\n  justify-content: flex-end;\\n  align-items: center;\\n  text-align: end;\\n  font-size: 25px;\\n  line-height: 25px;\\n  margin-right: 20px;\\n}\\nbody header #address .address_icon {\\n  width: 25px;\\n  height: 25px;\\n  margin-right: 5px;\\n}\\nbody .main_contents_wrap {\\n  display: flex;\\n  align-items: center;\\n  justify-content: space-between;\\n}\\nbody .main_contents_wrap button {\\n  background: transparent;\\n  border: none;\\n}\\nbody .main_contents_wrap button :hover {\\n  cursor: pointer;\\n}\\nbody .main_contents_wrap .move_btn {\\n  width: 25px;\\n  height: 25px;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://everywhere/./src/css/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../image/ic_share.svg */ \"./src/image/ic_share.svg\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../image/ic_exit.svg */ \"./src/image/ic_exit.svg\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../image/ic_kakao.svg */ \"./src/image/ic_kakao.svg\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../image/ic_naver.png */ \"./src/image/ic_naver.png\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ../image/ic_volume.svg */ \"./src/image/ic_volume.svg\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ../image/ic_volume_off.svg */ \"./src/image/ic_volume_off.svg\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(/*! ../image/ic_cloud.svg */ \"./src/image/ic_cloud.svg\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\nvar ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);\nvar ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);\nvar ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);\nvar ___CSS_LOADER_URL_REPLACEMENT_4___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___);\nvar ___CSS_LOADER_URL_REPLACEMENT_5___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_5___);\nvar ___CSS_LOADER_URL_REPLACEMENT_6___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_6___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  padding: 0px;\\n  margin: 0px;\\n}\\n\\nbody {\\n  padding: 0;\\n  margin: 0;\\n  height: calc(100vh - 25px);\\n  position: relative;\\n  background-color: #111;\\n}\\n\\ntextarea {\\n  display: none;\\n}\\n\\nfooter {\\n  width: 100%;\\n  box-sizing: border-box;\\n  position: absolute;\\n  bottom: 0;\\n  padding: 1rem;\\n}\\n\\nbutton {\\n  cursor: pointer;\\n  border: none;\\n  background-color: transparent;\\n}\\n\\n.btn {\\n  border-radius: 50%;\\n  border: 1px solid #fff;\\n  width: 45px;\\n  height: 45px;\\n  box-shadow: 2px 2px 3px #999;\\n  transition: 0.3s all;\\n}\\n\\n.share-btn {\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \") no-repeat center/18px, transparent;\\n}\\n.share-btn.on {\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_1___ + \") no-repeat center/18px, #fff;\\n}\\n\\n.kakao-btn {\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_2___ + \") no-repeat center, #FBE300;\\n  border-width: 0;\\n}\\n\\n.naver-btn {\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_3___ + \") no-repeat center, #00C73C;\\n  border-width: 0;\\n}\\n\\n.share-btn-list {\\n  display: none;\\n  position: absolute;\\n  bottom: 80px;\\n}\\n.share-btn-list > .btn:not(:last-child) {\\n  margin-bottom: 0.8rem;\\n}\\n\\n.share-btn.on + .share-btn-list {\\n  display: grid;\\n}\\n\\n.volume-controller {\\n  height: 45px;\\n  float: right;\\n  display: flex;\\n}\\n\\n.volumn-btn {\\n  align-self: center;\\n  width: 36px;\\n  height: 36px;\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_4___ + \") no-repeat center/20px, transparent;\\n}\\n.volumn-btn.off {\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_5___ + \") no-repeat center/20px, transparent;\\n}\\n\\n.write-btn {\\n  border: 1px solid #fff;\\n  border-radius: 30px;\\n  color: #fff;\\n  position: absolute;\\n  height: 45px;\\n  margin-left: 1rem;\\n  padding: 0 1.5rem;\\n  font-size: 1rem;\\n}\\n.write-btn:hover {\\n  background-color: #fff;\\n  color: #111;\\n  border-color: #111;\\n}\\n\\ninput[type=range] {\\n  -webkit-appearance: none;\\n  overflow: hidden;\\n  width: 100%;\\n  height: 5px;\\n  align-self: center;\\n  background: transparent;\\n  cursor: pointer;\\n  background-color: #7A7A7A;\\n  border-radius: 10px;\\n}\\ninput[type=range]::-webkit-slider-thumb {\\n  -webkit-appearance: none;\\n  width: 0;\\n  height: 5px;\\n  background: #fff;\\n  box-shadow: -100vw 0 0 100vw #fff;\\n  cursor: pointer;\\n}\\n\\n.popup {\\n  display: none;\\n  width: 100vw;\\n  height: 100vh;\\n  position: fixed;\\n  top: 0;\\n  z-index: 1;\\n  background-color: #11111188;\\n}\\n.popup.on {\\n  display: block;\\n}\\n.popup .popup-container {\\n  width: 400px;\\n  box-shadow: 0 4px 10px rgba(51, 51, 51, 0.1), 0 0 4px rgba(51, 51, 51, 0.05);\\n  height: fit-content;\\n  padding: 1.5rem;\\n  border-radius: 10px;\\n  background-color: #fff;\\n  position: absolute;\\n  margin: auto;\\n  left: 0;\\n  right: 0;\\n  top: 0;\\n  bottom: 0;\\n}\\n.popup .popup-container .close-btn {\\n  right: 1.5rem;\\n  top: 1.5rem;\\n  position: absolute;\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_1___ + \") no-repeat center;\\n  width: 1rem;\\n  height: 1rem;\\n}\\n.popup .popup-container .title {\\n  font-weight: 600;\\n  font-size: 1.15rem;\\n  margin: 1rem 0 1.2rem 0;\\n}\\n.popup .popup-container span {\\n  display: block;\\n  font-size: 0.75rem;\\n  color: #828282;\\n  margin-bottom: 1.5rem;\\n}\\n.popup .popup-container .file-upload-btn {\\n  position: relative;\\n  cursor: pointer;\\n  overflow: hidden;\\n  padding: 5px 10px;\\n  font-size: 14px;\\n  line-height: 22px;\\n  border-radius: 5px;\\n  color: #777;\\n  background-color: #fff;\\n  text-align: center;\\n  border: 1px solid #E5E5E5;\\n}\\n.popup .popup-container .file-upload-btn + input[type=file] {\\n  display: none;\\n}\\n.popup .popup-container .file-upload-btn:hover {\\n  border-color: #ddd;\\n}\\n.popup .popup-container .file-upload-btn:hover > span::before {\\n  width: 72px;\\n}\\n.popup .popup-container .file-upload-btn > span {\\n  margin: 1.5rem 0;\\n}\\n.popup .popup-container .file-upload-btn > span::before {\\n  content: \\\"\\\";\\n  width: 64px;\\n  height: 80px;\\n  display: block;\\n  transition: 0.1s all ease-in-out;\\n  margin: 0 auto 1rem auto;\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_6___ + \") no-repeat center;\\n}\\n.popup .popup-container .file-upload-btn > span.uploaded::before {\\n  background: url(\" + ___CSS_LOADER_URL_REPLACEMENT_6___ + \") no-repeat center;\\n}\\n\\n@keyframes edit-in {\\n  from {\\n    opacity: 0;\\n    transform: rotateZ(-70deg);\\n  }\\n  to {\\n    opacity: 1;\\n    transform: rotateZ(0deg);\\n  }\\n}\\n@keyframes edit-out {\\n  from {\\n    opacity: 1;\\n    transform: rotateZ(0deg);\\n  }\\n  to {\\n    opacity: 0;\\n    transform: rotateZ(-70deg);\\n  }\\n}\\n@keyframes plus-in {\\n  from {\\n    opacity: 1;\\n    transform: rotateZ(0deg);\\n  }\\n  to {\\n    opacity: 0;\\n    transform: rotateZ(180deg);\\n  }\\n}\\n@keyframes plus-out {\\n  from {\\n    opacity: 0;\\n    transform: rotateZ(180deg);\\n  }\\n  to {\\n    opacity: 1;\\n    transform: rotateZ(0deg);\\n  }\\n}\\nbody {\\n  background: #202020;\\n  color: #ffffff;\\n  font-family: \\\"Ubuntu\\\", sans-serif;\\n}\\nbody header {\\n  display: flex;\\n  align-items: center;\\n  justify-content: flex-end;\\n  height: 50px;\\n  margin-top: 25px;\\n  margin-bottom: 50px;\\n}\\nbody header #main_logo {\\n  font-weight: 700;\\n  font-size: 35px;\\n  position: absolute;\\n  left: 50%;\\n  transform: translate(-50%, 0);\\n}\\nbody header #address {\\n  width: 300px;\\n  height: 25px;\\n  display: flex;\\n  justify-content: flex-end;\\n  align-items: center;\\n  text-align: end;\\n  font-size: 25px;\\n  line-height: 25px;\\n  margin-right: 20px;\\n}\\nbody header #address .address_icon {\\n  width: 25px;\\n  height: 25px;\\n  margin-right: 5px;\\n}\\nbody .main_contents_wrap {\\n  display: flex;\\n  align-items: center;\\n  justify-content: space-between;\\n}\\nbody .main_contents_wrap button {\\n  background: transparent;\\n  border: none;\\n}\\nbody .main_contents_wrap button :hover {\\n  cursor: pointer;\\n}\\nbody .main_contents_wrap .move_btn {\\n  width: 25px;\\n  height: 25px;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://everywhere/./src/css/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -3189,6 +3189,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n\n      content += cssWithMappingToString(item);\n\n      if (needLayer) {\n        content += \"}\";\n      }\n\n      if (item[2]) {\n        content += \"}\";\n      }\n\n      if (item[4]) {\n        content += \"}\";\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n\n\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var _i = 0; _i < this.length; _i++) {\n        var id = this[_i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i2 = 0; _i2 < modules.length; _i2++) {\n      var item = [].concat(modules[_i2]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://everywhere/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  }\n\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://everywhere/./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -3288,6 +3299,83 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 "use strict";
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://everywhere/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
 
+/***/ }),
+
+/***/ "./src/image/ic_cloud.svg":
+/*!********************************!*\
+  !*** ./src/image/ic_cloud.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./images/ic_cloud.svg\";\n\n//# sourceURL=webpack://everywhere/./src/image/ic_cloud.svg?");
+
+/***/ }),
+
+/***/ "./src/image/ic_exit.svg":
+/*!*******************************!*\
+  !*** ./src/image/ic_exit.svg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./images/ic_exit.svg\";\n\n//# sourceURL=webpack://everywhere/./src/image/ic_exit.svg?");
+
+/***/ }),
+
+/***/ "./src/image/ic_kakao.svg":
+/*!********************************!*\
+  !*** ./src/image/ic_kakao.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./images/ic_kakao.svg\";\n\n//# sourceURL=webpack://everywhere/./src/image/ic_kakao.svg?");
+
+/***/ }),
+
+/***/ "./src/image/ic_naver.png":
+/*!********************************!*\
+  !*** ./src/image/ic_naver.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./images/ic_naver.png\";\n\n//# sourceURL=webpack://everywhere/./src/image/ic_naver.png?");
+
+/***/ }),
+
+/***/ "./src/image/ic_share.svg":
+/*!********************************!*\
+  !*** ./src/image/ic_share.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./images/ic_share.svg\";\n\n//# sourceURL=webpack://everywhere/./src/image/ic_share.svg?");
+
+/***/ }),
+
+/***/ "./src/image/ic_volume.svg":
+/*!*********************************!*\
+  !*** ./src/image/ic_volume.svg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./images/ic_volume.svg\";\n\n//# sourceURL=webpack://everywhere/./src/image/ic_volume.svg?");
+
+/***/ }),
+
+/***/ "./src/image/ic_volume_off.svg":
+/*!*************************************!*\
+  !*** ./src/image/ic_volume_off.svg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"./images/ic_volume_off.svg\";\n\n//# sourceURL=webpack://everywhere/./src/image/ic_volume_off.svg?");
+
 /***/ })
 
 /******/ 	});
@@ -3315,6 +3403,9 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -3355,6 +3446,37 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "./";
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /************************************************************************/
