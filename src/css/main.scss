@@ -1,0 +1,55 @@
+@import './utils.scss';
+
+body {
+  background: $black;
+  color: $white;
+  font-family: 'Ubuntu', sans-serif;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    #main_logo {
+      font-weight: 700;
+      font-size: 35px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    
+    #address {
+      width: 300px;
+      height: 25px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: end;
+      font-size: 25px;
+      line-height: 25px;
+      margin-right: 20px;
+      .address_icon {
+        width: 25px;
+        height: 25px;
+        margin-right:5px;
+      }
+    }
+  }
+  .main_contents_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      background: transparent;
+      border: none;
+      :hover {
+        cursor: pointer;
+      }
+    }
+    .move_btn {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
