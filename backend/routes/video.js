@@ -12,7 +12,4 @@ router.put('/:videoId', updateVideo);
 
 router.delete('/:videoId', deleteVideo);
 
-
-
-
 module.exports = router
