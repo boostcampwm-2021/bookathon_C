@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "aws-sdk": "^2.993.0",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
@@ -14,6 +15,7 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongoose": "^6.0.7",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "multer": "^1.4.3"
   }
 }
