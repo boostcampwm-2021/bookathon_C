@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I'm everywhere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div id='main_logo'>I'm everywhere</div>
+      <div id='address'>
+        <img class='address_icon' src=<%=require("../image/address_marker.svg").default%> />
+        <p id='address_text'>example address</p>
+      </div>
+    </header>
+    <div class='main_contents_wrap'>
+      <div class='left_btn_wrap'>
+        <button type='button'>
+          <img class='move_btn' id='left_move' src=<%=require("../image/left_btn.svg").default%>  />
+        </button>
+      </div>
+      <div class='main_wrap'>
+        <div id='main_video'>
+          <iframe  width="900" height="600" src="https://www.youtube.com/embed/S91wQbYYX3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+        </div>
+      </div>
+      <div class='right_btn_wrap'>
+        <button type='button'>
+          <img class='move_btn' id='right_move' src=<%=require("../image/right_btn.svg").default%>  />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
