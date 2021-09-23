@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
+const fs = require('fs');
 
 const apiRouter = require('./routes/api');
 
@@ -13,9 +14,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use('/videos', express.static('videos'))
 app.use(cors());
 
 app.use('/api', apiRouter);
+
+if (!fs.existsSync('videos')) {
+  fs.mkdirSync('videos')
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

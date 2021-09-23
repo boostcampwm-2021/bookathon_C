@@ -9,6 +9,10 @@ const videoSchema = new Schema({
     videoURL : {
         type : String,
         required : true
+    },
+    storageURL : {
+        type : String,
+        required : true
     }
 })
 
