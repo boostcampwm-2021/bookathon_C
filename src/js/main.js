@@ -106,6 +106,7 @@ volumeRangeBar.addEventListener('input', () => {
 volumeBtn.addEventListener('click', () => {
     volumeBtn.classList.toggle('off')
     volumeRangeBar.value = volumeBtn.classList.contains('off') ? 0 : 100
+    videoIframe.volume = Number(volumeRangeBar.value)/100
 })
 writeBtn.addEventListener('click', showPopup)
 writePopup.querySelector('.close-btn').addEventListener('click', hidePopup)
