@@ -1,5 +1,9 @@
 # 🛬 I'm Everywhere
 
+### 💾 배포 링크 : http://everywhere.o-r.kr/
+
+
+
 ### 😄 팀원
 
 | **ID** | **이름** | **역할** |
@@ -8,6 +12,15 @@
 |  J094  |  박춘화  | Backend  |
 |  J133  |   유진   | Frontend |
 |  J165  |  이창엽  | Backend  |
+
+
+
+### ✔️ 목표
+
+- J024_김미정 : 네이버페이 10만원 받기
+- J094_박춘화 : 프로젝트 무사히 완수하기
+- J133_유진 : 무언가 하나라도 배워가기
+- J165_이창엽 : 팀원들과 친해지기
 
 
 
@@ -57,9 +70,52 @@
 
 
 
-### ✔️ 목표
+### 💽 사용 기술/라이브러리
 
-- J024_김미정 : 네이버페이 10만원 받기
-- J094_박춘화 : 프로젝트 무사히 완수하기
-- J133_유진 : 무언가 하나라도 배워가기
-- J165_이창엽 : 팀원들과 친해지기
+- Frontend
+  - Vanilla Javascript
+  - Webpack + Babel
+  - Nginx 
+- Backend
+  - Node.js + Express.js
+  - Mongo DB(mongoose)
+  - aws-sdk, multer, cors
+
+
+
+### 📝 API 문서
+
+1. /api/video/ : 파일 업로드 요청 api
+
+   - POST
+
+   - 요청객체 :
+
+     ```
+      {
+        location : "String",
+        videoURL : "String",
+        storageURL : "String"
+      }
+     ```
+
+   - 응답객체 : 업로드 성공 메시지 객체
+
+2. /api/video/random/ : DB 내부의 랜덤한 동영상 요청 api
+
+   - GET
+
+   - 요청객체 : x
+
+   - 응답객체 :
+
+     ```
+      { 
+        message : "success",
+        video : {
+            location : "String"
+            videoURL : "String",
+            storageURL : "String"
+        }
+      }
+     ```
