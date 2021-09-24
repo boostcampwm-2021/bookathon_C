@@ -76,12 +76,21 @@ const getRandomLoc = () => locationList[parseInt(Math.random() * 5)]
 uploadFile.addEventListener('input', () => {
     const formData = new FormData()
     formData.append('video', document.querySelector('#video').files[0])
-    formData.append('location', getRandomLoc())
+    formData.append('location', document.querySelector('#location_input').value)
     fetch(`${backend}/api/video`, {
         method: "POST",
         headers: {  },
         body: formData
-      })
+    }).then((res) => {
+        if(res.status==201){
+            alert('Upload Complete!');
+        }
+        else{
+            alert('Upload Failed...');
+        }
+        
+    })
+    hidePopup();
 })
 
 shareOpenBtn.addEventListener('click', () => shareOpenBtn.classList.toggle('on'))

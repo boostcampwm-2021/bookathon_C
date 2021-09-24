@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>I'm everywhere</title>
     <link rel="icon" href="/image/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
@@ -47,8 +48,10 @@
           </div>
           <div class="popup-body">
             <form id="form">
+              <label for='location_input'>Location:</label>
+              <input type='text' id='location_input'>
               <div class="file-upload-btn">
-                  <span>Drag and drop or click your video</span>
+                  <span>Click and upload your video</span>
               </div>
               <input type="file" id="video" accept="video/*">
             </form>

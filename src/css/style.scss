@@ -1,3 +1,4 @@
+@import './utils.scss';
 body {
     padding: 0;
     margin: 0;
@@ -176,7 +177,13 @@ body {
         color: #828282;
         margin-bottom: 1.5rem;
       }
-  
+      label {
+        color:$black;
+        font-size: 14px;
+      }
+      #location_input{
+        margin-bottom: 10px;
+      }
       .file-upload-btn {
         position: relative;
         cursor: pointer;
