@@ -71,12 +71,11 @@ const showPopup = () => writePopup.classList.add('on')
 const hidePopup = () => writePopup.classList.remove('on')
 const uploadVideo = () => document.all.video.click()
 
-const locationList = ['Seoul', 'Gyunggido', 'Daejeon', 'Daegu']
-const getRandomLoc = () => locationList[parseInt(Math.random() * 5)]
 uploadFile.addEventListener('input', () => {
     const formData = new FormData()
+    const locationInput = document.querySelector('#location_input')
     formData.append('video', document.querySelector('#video').files[0])
-    formData.append('location', document.querySelector('#location_input').value)
+    formData.append('location', locationInput.value)
     fetch(`${backend}/api/video`, {
         method: "POST",
         headers: {  },
@@ -84,6 +83,7 @@ uploadFile.addEventListener('input', () => {
     }).then((res) => {
         if(res.status==201){
             alert('Upload Complete!');
+	    locationInput.value = ''
         }
         else{
             alert('Upload Failed...');
@@ -99,8 +99,9 @@ shareBtnList.querySelector('.copy-btn').addEventListener('click', copyHandler)
 shareBtnList.querySelector('.naver-btn').addEventListener('click', naverShareHandler)
 shareBtnList.querySelector('.kakao-btn').addEventListener('click', kakaoShareHandler)
 volumeRangeBar.addEventListener('input', () => {
-    const volume = Number(volumeRangeBar.value)
+    const volume = Number(volumeRangeBar.value)/100
     volume === 0 ? volumeBtn.classList.add('off') : volumeBtn.classList.remove('off')
+    videoIframe.volume = volume
 })
 volumeBtn.addEventListener('click', () => {
     volumeBtn.classList.toggle('off')

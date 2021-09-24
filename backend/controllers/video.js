@@ -22,7 +22,7 @@ const fileUpload = multer({ storage : storage }).single('video');
 
 const postVideo = async (req, res, next) => {
     try {
-        const location = req.body['location'];
+        const location = req.body['location'].length > 0 ? req.body['location'] : 'Somewhere in the earth...';
         const filename = `${nameDate}${nameExt}`;
         const videoURL = `${process.env.HOST_URL}/videos/${filename}`;
         const videoPath = `${__dirname}/../videos/${filename}`;
