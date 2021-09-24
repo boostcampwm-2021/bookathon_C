@@ -12,10 +12,10 @@ const uploadFile = document.querySelector('#video')
 const leftMove = document.querySelector('#left_move')
 const rightMove = document.querySelector('#right_move')
 const locationName = document.querySelector('#address_text')
-const videoIframe = document.querySelector('#main_video > iframe')
+const videoIframe = document.querySelector('#main_video > video')
 
 const href = location.href
-const backend = `http://101.101.217.153`
+const backend = `http://101.101.217.153:8000`
 
 const copyHandler = () => {
     let url = ''

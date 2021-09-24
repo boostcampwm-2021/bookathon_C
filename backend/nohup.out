@@ -1,0 +1,256 @@
+[0mGET /api/video/random [32m200 [0m22.275 ms - 259[0m
+[0mGET /api/video/random [32m200 [0m4.717 ms - 254[0m
+[0mGET /api/video/random [32m200 [0m4.134 ms - 259[0m
+[0mGET /api/video/random [32m200 [0m4.017 ms - 264[0m
+[0mGET /api/video/random [32m200 [0m5.061 ms - 265[0m
+[0mGET /api/video/random [32m200 [0m17.434 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m4.225 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m3.498 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m17.888 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m17.845 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m4.089 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m3.498 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m3.447 ms - 34[0m
+[0mGET /api/video/random [0m- [0m- ms - -[0m
+MongooseServerSelectionError: connection timed out
+    at NativeConnection.Connection.openUri (/home/bookathon_C/backend/node_modules/mongoose/lib/connection.js:796:32)
+    at /home/bookathon_C/backend/node_modules/mongoose/lib/index.js:328:10
+    at /home/bookathon_C/backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (/home/bookathon_C/backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (/home/bookathon_C/backend/node_modules/mongoose/lib/index.js:1149:10)
+    at Mongoose.connect (/home/bookathon_C/backend/node_modules/mongoose/lib/index.js:327:20)
+    at Object.<anonymous> (/home/bookathon_C/backend/bin/www:31:10)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10) {
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) { '101.101.217.153:27017' => [ServerDescription] },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    logicalSessionTimeoutMinutes: undefined
+  }
+}
+[0mGET /api/video/random [0m- [0m- ms - -[0m
+[0mGET /api/video/random [32m200 [0m17.669 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m4.088 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m3.559 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m17.803 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m4.222 ms - 34[0m
+[0mGET /api/video/random [32m200 [0m3.471 ms - 34[0m
+[0mGET /api/video/random [36m304 [0m3.602 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.491 ms - -[0m
+[0mGET /api/video/random [36m304 [0m4.493 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.377 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.355 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.402 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.416 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.399 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.337 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.318 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.160 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.265 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.101 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.158 ms - -[0m
+[0mPOST /api/video [32m201 [0m2762.509 ms - 21[0m
+[0mGET /api/video/random [32m200 [0m6.782 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m3.589 ms - 247[0m
+[0mGET /api/video/random [36m304 [0m3.524 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.643 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m3.548 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m3.619 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m3.622 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m3.643 ms - 247[0m
+[0mGET /favicon.ico [33m404 [0m2.496 ms - 1168[0m
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bookathon_C/backend/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bookathon_C/backend/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/home/bookathon_C/backend/node_modules/express/lib/response.js:1008:7)
+    at /home/bookathon_C/backend/app.js:44:7
+    at Layer.handle_error (/home/bookathon_C/backend/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:315:13)
+    at /home/bookathon_C/backend/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:275:10)
+    at /home/bookathon_C/backend/app.js:33:3
+[0mGET /api/video/random [32m200 [0m3.591 ms - 247[0m
+[0mGET /videos/1632452143104.mp4 [32m200 [0m2.726 ms - 10911677[0m
+[0mGET /videos/1632452143104.mp4 [32m206 [0m1.610 ms - 10911677[0m
+[0mGET /api/video/random [36m304 [0m3.367 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.366 ms - -[0m
+[0mGET /api/video/random [32m200 [0m5.034 ms - 247[0m
+[0mGET /favicon.ico [33m404 [0m0.686 ms - 1168[0m
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bookathon_C/backend/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bookathon_C/backend/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/home/bookathon_C/backend/node_modules/express/lib/response.js:1008:7)
+    at /home/bookathon_C/backend/app.js:44:7
+    at Layer.handle_error (/home/bookathon_C/backend/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:315:13)
+    at /home/bookathon_C/backend/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:275:10)
+    at /home/bookathon_C/backend/app.js:33:3
+[0mGET /api/video/random [36m304 [0m3.551 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.470 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m3.558 ms - 247[0m
+[0mGET /api/video/random [36m304 [0m3.506 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [32m206 [0m0.775 ms - 10911677[0m
+[0mGET /api/video/random [36m304 [0m3.475 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [32m206 [0m0.856 ms - 10911677[0m
+[0mGET /api/video/random [32m200 [0m4.797 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [32m206 [0m1.130 ms - 10911677[0m
+[0mPOST /api/video [32m201 [0m1023.427 ms - 21[0m
+[0mGET /api/video/random [36m304 [0m4.924 ms - -[0m
+[0mGET /videos/1632452143104.mp4 [36m304 [0m1.084 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.314 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.494 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.301 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.888 ms - 27090188[0m
+[0mGET /api/video/random [36m304 [0m4.195 ms - -[0m
+[0mGET /api/video/random [32m200 [0m4.135 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.423 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.393 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.369 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.231 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m2.521 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m3.373 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.702 ms - 27090188[0m
+[0mGET /api/video/random [32m200 [0m31.995 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.510 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.447 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [32m206 [0m0.685 ms - 5837081[0m
+[0mGET /api/video/random [36m304 [0m3.560 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.046 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.996 ms - -[0m
+[0mGET /api/video/random [36m304 [0m2.438 ms - -[0m
+[0mGET /api/video/random [36m304 [0m2.913 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.344 ms - -[0m
+[0mGET /api/video/random [36m304 [0m2.716 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.301 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m3.303 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.461 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [32m206 [0m0.652 ms - 5842921[0m
+[0mGET /api/video/random [32m200 [0m3.286 ms - 247[0m
+[0mGET /api/video/random [36m304 [0m4.579 ms - -[0m
+[0mGET /api/video/random [36m304 [0m10.613 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.859 ms - 25779468[0m
+[0mGET /api/video/random [36m304 [0m3.495 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.671 ms - 27090188[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.839 ms - 27090188[0m
+[0mGET /api/video/random [36m304 [0m3.357 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.275 ms - -[0m
+[0mPOST /api/video [32m201 [0m1330.833 ms - 21[0m
+[0mGET /api/video/random [32m200 [0m2.693 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [32m206 [0m0.682 ms - 5663471[0m
+[0mGET /api/video/random [36m304 [0m31.361 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.503 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [32m206 [0m0.896 ms - 5663471[0m
+[0mGET /api/video/random [32m200 [0m3.213 ms - 247[0m
+[0mGET /api/video/random [36m304 [0m4.451 ms - -[0m
+[0mGET /api/video/random [32m200 [0m11.598 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.947 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.084 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.110 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [32m206 [0m0.714 ms - 5663471[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.739 ms - 27090188[0m
+[0mGET /api/video/random [32m200 [0m4.416 ms - 247[0m
+[0mGET /api/video/random [32m200 [0m4.514 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [32m206 [0m0.764 ms - 5663471[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.777 ms - 27090188[0m
+[0mGET /api/video/random [32m200 [0m20.406 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.983 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [32m206 [0m0.884 ms - 5668797[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.751 ms - 27090188[0m
+[0mGET /api/video/random [32m200 [0m4.481 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.472 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.388 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.364 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.353 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.369 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.805 ms - 26598668[0m
+[0mGET /api/video/random [32m200 [0m4.396 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.726 ms - 27090188[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.439 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.359 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.607 ms - 25976076[0m
+[0mGET /api/video/random [36m304 [0m23.049 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.601 ms - 26107148[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m1.908 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.422 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.349 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.374 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.187 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.441 ms - -[0m
+[0mGET /api/video/random [32m200 [0m4.333 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.572 ms - 27090188[0m
+[0mGET /api/video/random [36m304 [0m3.244 ms - -[0m
+[0mGET /api/video/random [32m200 [0m2.354 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.668 ms - 25700507[0m
+[0mGET /api/video/random [32m200 [0m4.972 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [32m206 [0m0.626 ms - 5663471[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.445 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.222 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.740 ms - 491520[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.562 ms - 390144[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.363 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.255 ms - -[0m
+[0mGET /api/video/random [36m304 [0m4.302 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.520 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.196 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.741 ms - 14441740[0m
+[0mGET /api/video/random [32m200 [0m7.535 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.413 ms - -[0m
+[0mGET / [33m404 [0m2.630 ms - 1168[0m
+Error: No default engine was specified and no extension was provided.
+    at new View (/home/bookathon_C/backend/node_modules/express/lib/view.js:61:11)
+    at Function.render (/home/bookathon_C/backend/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/home/bookathon_C/backend/node_modules/express/lib/response.js:1008:7)
+    at /home/bookathon_C/backend/app.js:44:7
+    at Layer.handle_error (/home/bookathon_C/backend/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:315:13)
+    at /home/bookathon_C/backend/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bookathon_C/backend/node_modules/express/lib/router/index.js:275:10)
+    at /home/bookathon_C/backend/app.js:33:3
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [32m206 [0m0.693 ms - 5822850[0m
+[0mGET /api/video/random [32m200 [0m3.239 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [32m206 [0m0.686 ms - 5663471[0m
+[0mGET /api/video/random [36m304 [0m3.193 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.199 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.260 ms - -[0m
+[0mGET /api/video/random [32m200 [0m4.273 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.448 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.195 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.420 ms - -[0m
+[0mGET /api/video/random [32m200 [0m10.465 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [36m304 [0m0.462 ms - -[0m
+[0mGET /api/video/random [36m304 [0m4.293 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.146 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.390 ms - -[0m
+[0mGET /api/video/random [32m200 [0m4.034 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [36m304 [0m0.390 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.142 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.382 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.131 ms - 247[0m
+[0mGET /videos/1632452639710.mp4?autoplay=1&mute=1 [32m206 [0m0.704 ms - 5663471[0m
+[0mGET /api/video/random [32m200 [0m4.445 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.384 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.302 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.155 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.192 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.393 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.117 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.739 ms - 20339365[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.395 ms - -[0m
+[0mGET /api/video/random [32m200 [0m4.168 ms - 247[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.425 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.107 ms - -[0m
+[0mGET /api/video/random [36m304 [0m3.154 ms - -[0m
+[0mGET /api/video/random [32m200 [0m3.088 ms - 247[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.421 ms - -[0m
+[0mGET /videos/1632452143104.mp4?autoplay=1&mute=1 [36m304 [0m0.464 ms - -[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [32m206 [0m0.728 ms - 19355548[0m
+[0mGET /videos/1632452594493.mp4?autoplay=1&mute=1 [36m304 [0m0.468 ms - -[0m

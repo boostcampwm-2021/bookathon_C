@@ -8,6 +8,11 @@ const fs = require('fs');
 
 const apiRouter = require('./routes/api');
 
+const corsOptions = {
+    origin : 'http://everywhere.o-r.kr',
+    credentials : true
+}
+
 const app = express();
 
 app.use(logger('dev'));
@@ -15,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/videos', express.static('videos'))
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use('/api', apiRouter);
 
