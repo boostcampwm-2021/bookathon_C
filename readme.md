@@ -62,6 +62,9 @@
   - Node.js + Express.js
   - Mongo DB(mongoose)
   - aws-sdk, multer, cors
+  
+ ![image](https://user-images.githubusercontent.com/67806982/134619745-51ab5fff-269f-4b8c-b837-5b19f05d40cb.png)
+
 
 ### 📝 API 문서
 
