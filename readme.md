@@ -1,4 +1,4 @@
-# 🛬 방구석에서 어디든지 갈 수 있는 코로나시대 맞춤 랜선 여행 I'm Everywhere 🏝
+# 🛬 방구석 맞춤 랜선 여행 I'm Everywhere 🏝
 
 ### 💾 배포 링크 : http://everywhere.o-r.kr/
 ### 데모 영상 : https://www.youtube.com/watch?v=3cYTVnsrYuM
